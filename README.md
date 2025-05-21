@@ -32,5 +32,8 @@ Install the Live Server extension if you haven’t already.
 
 Right-click on index.html and select “Open with Live Server”.
 
+
+https://222002anil.github.io/AssignmentDevifyX/
+
 The dashboard will load in your browser (typically at http://127.0.0.1:5500)
 
