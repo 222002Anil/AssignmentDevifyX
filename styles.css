@@ -1,0 +1,244 @@
+/* Theme Variables */
+:root {
+  --bg: #0e0f19;
+  --fg: #ffffff;
+  --card-bg: #1c1f2e;
+  --text-muted: #bbb;
+  --primary: #4e89ff;
+  --accent: #28a745;
+  --button-bg: #333;
+  --button-hover: #4e89ff;
+}
+
+body.light-theme {
+  --bg: #f4f4f4;
+  --fg: #1a1a1a;
+  --card-bg: #ffffff;
+  --text-muted: #666;
+  --button-bg: #ddd;
+  --button-hover: #007bff;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.title p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.generated-time {
+  padding: 8px 0; /* Top & bottom padding */
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #444;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Filters Bar */
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--card-bg);
+}
+
+.filters-bar label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  color: var(--fg);
+}
+
+/* Buttons */
+button, .upload-button {
+  background-color: var(--button-bg);
+  color: var(--fg);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover, .upload-button:hover {
+  background-color: var(--button-hover);
+  color: #fff;
+}
+
+.upload-button input {
+  display: none;
+}
+
+/* Dashboard Grid */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2rem 1rem;
+  padding: 2rem 1.5rem;
+  grid-template-areas:
+    "lineChart barChart"
+    "donutChart summary";
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Chart Cards */
+.card.chart {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chart-label {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--fg);
+}
+
+/* Grid Area Assignments */
+#lineChart {
+  grid-area: lineChart;
+}
+
+#barChart {
+  grid-area: barChart;
+}
+
+#donutChart {
+  grid-area: donutChart;
+  margin: 0 auto; /* Center donut horizontally */
+}
+
+#summaryPanel {
+  grid-area: summary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+}
+
+/* Summary Big Number */
+.big {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar,
+  .filters-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "lineChart"
+      "barChart"
+      "donutChart"
+      "summary";
+  }
+
+  .card.chart, .card.summary {
+    height: auto;
+  }
+}

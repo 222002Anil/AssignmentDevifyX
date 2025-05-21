@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Sales Analytics",
+    "description": "Monthly sales data across multiple regions and product categories",
+    "unit": "USD",
+    "currency": "$",
+    "generatedAt": "2025-05-17T12:00:00Z"
+  },
+  "data": {
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "categories": ["Electronics", "Furniture", "Clothing"],
+    "regions": ["North", "South", "East", "West"],
+    "sales": [
+      { "month": "Jan", "region": "North", "values": { "Electronics": 12500, "Furniture": 7800, "Clothing": 4300 } },
+      { "month": "Jan", "region": "South", "values": { "Electronics": 11000, "Furniture": 6400, "Clothing": 6900 } },
+      { "month": "Jan", "region": "East", "values": { "Electronics": 9500, "Furniture": 7200, "Clothing": 5600 } },
+      { "month": "Jan", "region": "West", "values": { "Electronics": 10200, "Furniture": 8500, "Clothing": 4800 } },
+      { "month": "Feb", "region": "North", "values": { "Electronics": 14200, "Furniture": 8100, "Clothing": 5200 } },
+      { "month": "Feb", "region": "South", "values": { "Electronics": 13000, "Furniture": 7300, "Clothing": 6100 } },
+      { "month": "Feb", "region": "East", "values": { "Electronics": 11200, "Furniture": 7900, "Clothing": 5400 } },
+      { "month": "Feb", "region": "West", "values": { "Electronics": 10800, "Furniture": 8700, "Clothing": 5000 } },
+      { "month": "Mar", "region": "North", "values": { "Electronics": 13800, "Furniture": 8500, "Clothing": 5600 } },
+      { "month": "Mar", "region": "South", "values": { "Electronics": 12300, "Furniture": 7700, "Clothing": 6200 } },
+      { "month": "Mar", "region": "East", "values": { "Electronics": 11900, "Furniture": 8000, "Clothing": 5900 } },
+      { "month": "Mar", "region": "West", "values": { "Electronics": 11300, "Furniture": 9000, "Clothing": 5100 } },
+      { "month": "Apr", "region": "North", "values": { "Electronics": 15000, "Furniture": 8700, "Clothing": 5900 } },
+      { "month": "Apr", "region": "South", "values": { "Electronics": 13700, "Furniture": 7600, "Clothing": 6500 } },
+      { "month": "Apr", "region": "East", "values": { "Electronics": 12600, "Furniture": 8100, "Clothing": 6100 } },
+      { "month": "Apr", "region": "West", "values": { "Electronics": 11800, "Furniture": 9300, "Clothing": 5200 } },
+      { "month": "May", "region": "North", "values": { "Electronics": 16000, "Furniture": 8900, "Clothing": 6100 } },
+      { "month": "May", "region": "South", "values": { "Electronics": 14000, "Furniture": 7800, "Clothing": 6700 } },
+      { "month": "May", "region": "East", "values": { "Electronics": 13000, "Furniture": 8500, "Clothing": 6400 } },
+      { "month": "May", "region": "West", "values": { "Electronics": 12200, "Furniture": 9500, "Clothing": 5300 } },
+      { "month": "Jun", "region": "North", "values": { "Electronics": 15500, "Furniture": 9100, "Clothing": 6200 } },
+      { "month": "Jun", "region": "South", "values": { "Electronics": 14300, "Furniture": 8000, "Clothing": 6800 } },
+      { "month": "Jun", "region": "East", "values": { "Electronics": 13300, "Furniture": 8800, "Clothing": 6500 } },
+      { "month": "Jun", "region": "West", "values": { "Electronics": 12400, "Furniture": 9700, "Clothing": 5400 } }
+    ]
+  }
+}

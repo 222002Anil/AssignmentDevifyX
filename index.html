@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Analytics Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-wrapper">
+
+  <div class="navbar">
+    <div class="title">
+      <h1>Sales Analytics</h1>
+      <p>Monthly sales data across multiple regions and product categories</p>
+    </div>
+    <div class="controls">
+      <span class="currency">USD</span>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+      <div class="generated-time" id="generatedTime">Generated: </div>
+    </div>
+  </div>
+
+  <div class="filters-bar">
+    <label>Month
+      <select name="month"></select>
+    </label>
+    <label>Region
+      <select name="region"></select>
+    </label>
+    <label>Category
+      <select name="category"></select>
+    </label>
+    <label for="upload-json" class="upload-button">Upload JSON
+      <input type="file" id="upload-json" accept="application/json" hidden>
+    </label>
+    <button id="downloadCSV">Export CSV</button>
+    <button id="toggleTheme">Toggle Theme</button>
+  </div>
+
+  <div class="dashboard">
+    <div class="card chart">
+      <canvas id="lineChart"></canvas>
+      <p class="chart-label">Line Chart</p>
+    </div>
+    <div class="card chart">
+      <canvas id="barChart"></canvas>
+      <p class="chart-label">Bar Chart</p>
+    </div>
+    <div class="card chart">
+      <canvas id="donutChart"></canvas>
+      <p class="chart-label">Donut Chart</p>
+    </div>
+
+    <div class="card summary" id="summaryPanel">
+      <h2>Total Sales</h2>
+      <p class="big" id="totalSales">$0</p>
+      <p>Avg per Category<br><strong id="avgPerCat">$0</strong></p>
+      <p>Top Region: <strong id="topRegion">-</strong></p>
+      <p>Bottom Region: <strong id="bottomRegion">-</strong></p>
+    </div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
